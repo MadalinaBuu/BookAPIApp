@@ -5,8 +5,10 @@ namespace BookAPI
     public class Book
     {
         public int Id { get; set; }
-        [StringLength(20)]
-        public string Status { get; set; } = string.Empty;
+        [StringLength(40)]
+        public string Title { get; set; } = String.Empty;
+        public int StatusId { get; set; }
+        public Status? Status { get; set; }
         [StringLength(200)]
         public string Description { get; set; } = string.Empty;
 
